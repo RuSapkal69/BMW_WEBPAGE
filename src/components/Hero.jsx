@@ -24,21 +24,29 @@ const Hero = () => {
     }, [])
 
     useGSAP(() => {
-        gsap.to('#hero', {opacity: 1, y: 0, delay: 1.5})
+        gsap.to('#hero', {opacity: 1, delay: 3})
+        gsap.to('#cda', {opacity: 1, y: -50, delay: 3})
     }, [])
 
   return (
     <section className='w-full nav-height bg-black relative'>
-        {/* <div className='h-5/6 w-full flex-center flex-col'>
+        <div className='mt-10 max-md:mt-2 max-sm:mt-2 w-full flex-center flex-col'>
             <p id='hero' className='hero-title'>M5 COMPETITION</p>
-        </div> */}
-        <div className=' mt-10 w-full'>
-            <video className='pointer-events-none w-full h-auto' autoPlay muted playsInline={true} key={videoSrc} loop>
+        </div>
+        <div className='max-md:mt-2 max-sm:mt-2 mt-10 w-full h-[400px]'>
+            <video className='pointer-events-none w-full h-[400px]' autoPlay muted playsInline={true} key={videoSrc} loop>
                 <source 
                 src={videoSrc}
                 type="video/mp4"
                 />
             </video>
+        </div>
+        <div
+        id="cda"
+        className='flex flex-col items-center opacity-0 translate-y-20 my-10'
+        >
+            <a href="#highlights" className='btn'>Explore</a>
+            <p className='font-normal text-xl'>Know more about the competition.</p>
         </div>
     </section>
   )

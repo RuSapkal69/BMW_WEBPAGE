@@ -12,11 +12,11 @@ const Model = () => {
     <section className="common-padding">
       <div className="screen-max-width">
         <h1 id="heading" className="section-heading">
-          Take a closer look.
+          Experience the Marvel of Engineering
         </h1>
 
         <p className="mt-2 text-lg text-white">
-          Explore the BMW M4 Competition in stunning 3D with color customization.
+          Explore the BMW M Series Coupe Versions in stunning 3D.
         </p>
 
         <div className="flex flex-col items-center mt-8">

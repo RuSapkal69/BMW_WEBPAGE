@@ -21,7 +21,7 @@ const Model = () => {
 
         <div className="flex flex-col items-center mt-8">
           {/* 3D Model Container */}
-          <div className="w-full h-[75vh] md:h-[90vh] overflow-hidden relative rounded-xl shadow-lg bg-gray-900">
+          <div className="w-full h-[75vh] md:h-[90vh] overflow-hidden relative rounded-xl shadow-lg bg-white">
             <ModelView />
           </div>
         </div>

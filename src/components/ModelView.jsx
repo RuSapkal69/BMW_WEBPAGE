@@ -3,15 +3,15 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Environment } from "@react-three/drei";
 
 const models = {
-  "BMW M4 Coupe": "/models/2024_bmw_m4_coupe_competition.glb",
-  "BMW M8 Coupe": "/models/2020_bmw_m8_coupe.glb", // Adjust path if needed
+  "BMW M4 Coupe": { path: "/models/2024_bmw_m4_coupe_competition.glb", scale: 1.5 },
+  "BMW M8 Coupe": { path: "/models/2020_BMW_M8_COUPE_first.glb", scale: 150 }, // Adjust scale as needed
 };
 
 const ModelView = () => {
   const [selectedModel, setSelectedModel] = useState("BMW M4 Coupe");
 
   // Load selected model
-  const { scene } = useGLTF(models[selectedModel]);
+  const { scene } = useGLTF(models[selectedModel].path);
 
   return (
     <div className="w-full h-full relative">
@@ -21,7 +21,7 @@ const ModelView = () => {
           <button
             key={model}
             className={`px-4 py-2 text-sm font-semibold rounded-lg transition-all ${
-              selectedModel === model ? "bg-blue-600 text-white" : "bg-gray-700 text-gray-300"
+              selectedModel === model ? "bg-gray-700 text-white" : "bg-blue-600 text-white" 
             }`}
             onClick={() => setSelectedModel(model)}
           >
@@ -36,15 +36,19 @@ const ModelView = () => {
         <directionalLight position={[2, 5, 2]} intensity={1} />
         <Environment preset="city" />
 
-        {/* Render Selected 3D Model */}
-        <primitive object={scene} scale={1.5} position={[0, -1, 0]} />
+        {/* Render Selected 3D Model with dynamic scale */}
+        <primitive object={scene} scale={models[selectedModel].scale} position={[0, -1, 0]} />
 
         {/* Orbit controls for rotation */}
-        <OrbitControls enableZoom={false} />
+        <OrbitControls 
+          enableZoom={true} // Allows zooming with scroll wheel
+          enablePan={true}  // Allows moving the camera horizontally
+          minDistance={1}   // Prevents zooming in too close
+          maxDistance={6}  // Prevents zooming out too far
+        />
       </Canvas>
     </div>
   );
 };
 
 export default ModelView;
-

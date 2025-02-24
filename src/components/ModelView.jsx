@@ -2,34 +2,31 @@ import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Environment } from "@react-three/drei";
 
+const models = {
+  "BMW M4 Coupe": "/models/2024_bmw_m4_coupe_competition.glb",
+  "BMW M8 Coupe": "/models/2020_bmw_m8_coupe.glb", // Adjust path if needed
+};
+
 const ModelView = () => {
-  // ✅ Load BMW Model (Correct Path)
-  const { scene } = useGLTF("/models/2024_bmw_m4_coupe_competition.glb");
+  const [selectedModel, setSelectedModel] = useState("BMW M4 Coupe");
 
-  // Available car colors
-  const colors = ["black", "white", "blue", "green", "red", "orange", "yellow"];
-  const [carColor, setCarColor] = useState(colors[0]);
-
-  // Change car color dynamically
-  scene.traverse((child) => {
-    if (child.isMesh && child.material) {
-      child.material.color.set(carColor);
-    }
-  });
+  // Load selected model
+  const { scene } = useGLTF(models[selectedModel]);
 
   return (
     <div className="w-full h-full relative">
-      {/* Color Selection Buttons */}
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 flex gap-3 z-10">
-        {colors.map((color) => (
+      {/* Model Selection Buttons */}
+      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 flex gap-3 z-10 bg-black p-2 rounded-lg shadow-lg">
+        {Object.keys(models).map((model) => (
           <button
-            key={color}
-            className={`w-10 h-10 rounded-full border-2 ${
-              carColor === color ? "border-white" : "border-gray-500"
+            key={model}
+            className={`px-4 py-2 text-sm font-semibold rounded-lg transition-all ${
+              selectedModel === model ? "bg-blue-600 text-white" : "bg-gray-700 text-gray-300"
             }`}
-            style={{ backgroundColor: color }}
-            onClick={() => setCarColor(color)}
-          />
+            onClick={() => setSelectedModel(model)}
+          >
+            {model}
+          </button>
         ))}
       </div>
 
@@ -39,7 +36,7 @@ const ModelView = () => {
         <directionalLight position={[2, 5, 2]} intensity={1} />
         <Environment preset="city" />
 
-        {/* Render 3D Model */}
+        {/* Render Selected 3D Model */}
         <primitive object={scene} scale={1.5} position={[0, -1, 0]} />
 
         {/* Orbit controls for rotation */}

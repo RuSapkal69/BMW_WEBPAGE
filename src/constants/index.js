@@ -20,13 +20,13 @@ import {
         "Groundbreaking performance.",
       ],
       video: highlightFirstVideo,
-      videoDuration: 4,
+      videoDuration: 10,
     },
     {
       id: 2,
       textLists: ["Titanium.", "So strong. So light. So Pro."],
       video: highlightSecondVideo,
-      videoDuration: 5,
+      videoDuration: 30,
     },
     {
       id: 3,
@@ -36,13 +36,13 @@ import {
         "iPhone ever. Far out.",
       ],
       video: highlightThirdVideo,
-      videoDuration: 2,
+      videoDuration: 6,
     },
     {
       id: 4,
       textLists: ["All-new Action button.", "What will yours do?."],
       video: highlightFourthVideo,
-      videoDuration: 3.63,
+      videoDuration: 28,
     },
   ];
   

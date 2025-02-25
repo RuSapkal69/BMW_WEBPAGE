@@ -6,10 +6,10 @@ import BMW_big_hero from '/assets/videos/BMW_big_hero.mp4';
 
 import BMW_small_hero from '/assets/videos/BMW_small_hero.mp4';
 
-import highlightFirstmv from "/assets/videos/highlight-first.mp4";
-import highlightSectmv from "/assets/videos/hightlight-third.mp4";
-import highlightThirdmv from "/assets/videos/hightlight-sec.mp4";
-import highlightFourthmv from "/assets/videos/hightlight-fourth.mp4";
+import highlightFirstmv from "/assets/videos/BMW_1_Highlights .mp4";
+import highlightSectmv from "/assets/videos/BMW_2_Highlights.mp4";
+import highlightThirdmv from "/assets/videos/BMW_3_Highlights_new.mp4";
+import highlightFourthmv from "/assets/videos/BMW_4_Highlights.mp4";
 import exploremv from "/assets/videos/explore.mp4";
 import framemv from "/assets/videos/frame.mp4";
 

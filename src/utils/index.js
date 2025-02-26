@@ -10,7 +10,7 @@ import highlightFirstmv from "/assets/videos/BMW_1_Highlights .mp4";
 import highlightSectmv from "/assets/videos/BMW_2_Highlights.mp4";
 import highlightThirdmv from "/assets/videos/BMW_3_Highlights_new.mp4";
 import highlightFourthmv from "/assets/videos/BMW_4_Highlights.mp4";
-import exploremv from "/assets/videos/explore.mp4";
+import exploremv from "/assets/videos/BMW_EXPLORE.mp4";
 import framemv from "/assets/videos/BMW_PROMO.mp4";
 
 import apple from "/assets/images/apple.svg";
@@ -26,8 +26,8 @@ import yellow from "/assets/images/yellow.jpg";
 import blue from "/assets/images/blue.jpg";
 import white from "/assets/images/white.jpg";
 import black from "/assets/images/black.jpg";
-import explore1 from "/assets/images/explore1.jpg";
-import explore2 from "/assets/images/explore2.jpg";
+import explore1 from "/assets/images/explore_bmw_2.png";
+import explore2 from "/assets/images/explore_bmw_1.png";
 import chip from "/assets/images/Engine.jpg";
 import frame from "/assets/images/frame.png";
 

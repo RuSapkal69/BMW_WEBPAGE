@@ -20,27 +20,51 @@ const Engine = () => {
     }
   };
 
+  // useGSAP(() => {
+  //   gsap.from('#engine', {
+  //     scrollTrigger: {
+  //       trigger: '#engine',
+  //       start: '20% bottom',
+  //     },
+  //     opacity: 0,
+  //     scale: 2,
+  //     duration: 2,
+  //     ease: 'power2.inOut'
+  //   });
+  // }, []);
   useGSAP(() => {
-    gsap.from('#engine', {
-      scrollTrigger: {
-        trigger: '#engine',
-        start: '20% bottom',
-      },
-      opacity: 0,
-      scale: 2,
-      duration: 2,
-      ease: 'power2.inOut'
-    });
+    gsap.fromTo('#engine', 
+      {
+        opacity: 0,
+        scale: 1.5,
+        y: 100, // Move down initially for a subtle parallax effect
+      }, 
+      {
+        scrollTrigger: {
+          trigger: '#engine',
+          start: 'top 80%', // Triggers when the image is 80% in view
+          end: 'bottom 60%', // Keeps it active while scrolling
+          scrub: 1.5, // Smooth scrolling effect
+        },
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 1.5,
+        ease: 'power2.out',
+      }
+    );
   }, []);
+  
+  
 
   return (
     <section className='common-padding'>
       <div className='screen-max-width'>
-        <div id="engine" className='flex-center w-full my-20'>
+        <div id="engine" className='flex-center w-full mt-0 mb-[5rem]'>
           <img 
-          src={chipImg} alt="chip"
-          width={180}
-          height={180}
+          src={chipImg} alt="Engine"
+          width={650}
+          height={450}
           />
         </div>
         <div className='flex flex-col items-center'>
@@ -53,9 +77,10 @@ const Engine = () => {
           </p>
         </div>
         <div className='mt-10 md:mt-20 mb-14'>
-          <div className='relative w-full h-full flex-center'>
+          <div className='flex-center'>
             <video 
             playsInline muted={isMuted} preload='none' autoPlay ref={videoRef}
+            className='w-full h-full object-cover'
             >
               <source
               src={frameVideo} alt="promotional video"

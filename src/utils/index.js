@@ -28,7 +28,7 @@ import white from "/assets/images/white.jpg";
 import black from "/assets/images/black.jpg";
 import explore1 from "/assets/images/explore1.jpg";
 import explore2 from "/assets/images/explore2.jpg";
-import chip from "/assets/images/chip.jpeg";
+import chip from "/assets/images/Engine.jpg";
 import frame from "/assets/images/frame.png";
 
 export const heroVideo = BMW_big_hero;

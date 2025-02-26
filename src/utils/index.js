@@ -11,7 +11,7 @@ import highlightSectmv from "/assets/videos/BMW_2_Highlights.mp4";
 import highlightThirdmv from "/assets/videos/BMW_3_Highlights_new.mp4";
 import highlightFourthmv from "/assets/videos/BMW_4_Highlights.mp4";
 import exploremv from "/assets/videos/explore.mp4";
-import framemv from "/assets/videos/frame.mp4";
+import framemv from "/assets/videos/BMW_PROMO.mp4";
 
 import apple from "/assets/images/apple.svg";
 import search from "/assets/images/search.svg";

@@ -53,6 +53,12 @@ const Engine = () => {
         ease: 'power2.out',
       }
     );
+    gsap.to('.g_fadeIn', {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: 'power2.inOut',
+    });
   }, []);
   
   
@@ -76,8 +82,8 @@ const Engine = () => {
             The M-series V8 engine is a marvel of engineering. It is a 4.4L V8 engine that produces 617 horsepower and 553 lb-ft of torque. It can go from 0-60 mph in just 3.1 seconds. 
           </p>
         </div>
-        <div className='mt-10 md:mt-20 mb-14'>
-          <div className='flex-center'>
+        <div className='mt-10 md:mt-20 mb-[20rem]'>
+          <div id="film" className='flex-center'>
             <video 
             playsInline muted={isMuted} preload='none' autoPlay ref={videoRef}
             className='w-full h-full object-cover'
@@ -90,38 +96,12 @@ const Engine = () => {
             {/* Mute/Unmute Button */}
             <button
               onClick={toggleMute}
-              className="absolute bottom-[22%] right-[1%] bg-black/50 hover:bg-black/70 p-3 rounded-full text-white transition-all"
+              className="absolute bottom-[3%] right-[1%] bg-black/50 hover:bg-black/70 p-3 rounded-full text-white transition-all"
             >
               <FontAwesomeIcon icon={isMuted ? faVolumeXmark : faVolumeHigh} size="lg" />
             </button>
           </div>
           <p className='text-gray font-semibold text-center mt-3'>BMW M-series Advertisement</p>
-          <div className='feature-text-container'>
-            <div className='flex-1 flex-center'>
-                <p className='feature-text g_text'>
-                    The M-Series is {' '}
-                    <span className='text-white'>
-                    a range of high-performance vehicles engineered by BMW's M division. 
-                    </span> The first model was the M1, which was revealed in 1978. 
-                    The M-Series has since been a staple of BMW's lineup.
-                    <span className='text-white'>
-                    The M-Series includes the M3, M5, and M6 being some of the most popular models.
-                    </span>
-                </p>
-            </div>
-            <div className='flex-1 flex-center'>
-                <p className='feature-text g_text'>
-                    Designed for performance and sporty driving, the M-Series {' '}
-                    <span className='text-white'>
-                        offers a range of engine options, including inline-6 and V8 configurations, as well as hybrid and plug-in hybrid powertrain options.
-                    </span> M-series Cars builded and designed with the best technology and materials offers the best aerodynamics
-                     for seamless driving experience.
-                          <span className='text-white'>
-                              Each model is carefully crafted to deliver exceptional performance, handling, and style.
-                          </span> The M-Series is a testament to BMW's commitment to innovation and performance.
-                      </p>
-                  </div>
-              </div>
         </div>
       </div>
     </section>

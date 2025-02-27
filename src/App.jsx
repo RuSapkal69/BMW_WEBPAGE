@@ -5,6 +5,7 @@ import Highlights from './components/Highlights'
 import Model from './components/Model'
 import Features from './components/Features'
 import Engine from './components/Engine'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Model />
       <Features />
       <Engine />
+      <Footer />
     </main>
   )
 }

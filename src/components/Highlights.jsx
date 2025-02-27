@@ -6,6 +6,11 @@ import VideoCarousel from './VideoCarousel'
 
 const Highlights = () => {
 
+  const scrollToSection = () => {
+    document.querySelector("#film")?.scrollIntoView({ behavior: "smooth" });
+  };
+  
+
   useGSAP(() => {
     gsap.to('#title', {opacity: 1, y: 0})
     gsap.to(".link", {opacity: 1, y: 0, duration: 1, stagger: 0.25})
@@ -17,7 +22,7 @@ const Highlights = () => {
         <div className='mb-12 w-full md:flex items-end justify-between'>
           <h1 id="title" className='section-heading'>Get the highlights</h1>
           <div className='flex flex-wrap items-end gap-5'>
-            <p className='link'>
+            <p onClick={scrollToSection} className='link'>
               Watch the film
               <img 
               src={watchImg} alt="Watch Icon"

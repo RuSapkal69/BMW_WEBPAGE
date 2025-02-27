@@ -90,7 +90,7 @@ const Engine = () => {
             {/* Mute/Unmute Button */}
             <button
               onClick={toggleMute}
-              className="absolute bottom-4 right-4 bg-black/50 hover:bg-black/70 p-3 rounded-full text-white transition-all"
+              className="absolute bottom-[22%] right-[1%] bg-black/50 hover:bg-black/70 p-3 rounded-full text-white transition-all"
             >
               <FontAwesomeIcon icon={isMuted ? faVolumeXmark : faVolumeHigh} size="lg" />
             </button>

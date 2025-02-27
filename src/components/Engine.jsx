@@ -95,6 +95,33 @@ const Engine = () => {
               <FontAwesomeIcon icon={isMuted ? faVolumeXmark : faVolumeHigh} size="lg" />
             </button>
           </div>
+          <p className='text-gray font-semibold text-center mt-3'>BMW M-series Advertisement</p>
+          <div className='feature-text-container'>
+            <div className='flex-1 flex-center'>
+                <p className='feature-text g_text'>
+                    The M-Series is {' '}
+                    <span className='text-white'>
+                    a range of high-performance vehicles engineered by BMW's M division. 
+                    </span> The first model was the M1, which was revealed in 1978. 
+                    The M-Series has since been a staple of BMW's lineup.
+                    <span className='text-white'>
+                    The M-Series includes the M3, M5, and M6 being some of the most popular models.
+                    </span>
+                </p>
+            </div>
+            <div className='flex-1 flex-center'>
+                <p className='feature-text g_text'>
+                    Designed for performance and sporty driving, the M-Series {' '}
+                    <span className='text-white'>
+                        offers a range of engine options, including inline-6 and V8 configurations, as well as hybrid and plug-in hybrid powertrain options.
+                    </span> M-series Cars builded and designed with the best technology and materials offers the best aerodynamics
+                     for seamless driving experience.
+                          <span className='text-white'>
+                              Each model is carefully crafted to deliver exceptional performance, handling, and style.
+                          </span> The M-Series is a testament to BMW's commitment to innovation and performance.
+                      </p>
+                  </div>
+              </div>
         </div>
       </div>
     </section>

@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     <section className='w-full nav-height bg-black relative'>
         <div className='mt-10 max-md:mt-2 max-sm:mt-2 w-full flex-center flex-col'>
-            <p id='hero' className='hero-title'>M5 COMPETITION</p>
+            <p id='hero' className='hero-title'>BMW M SERIES</p>
         </div>
         <div className='max-md:mt-2 max-sm:mt-2 mt-10 w-full h-[400px]'>
             <video className='pointer-events-none w-full h-[400px]' autoPlay muted playsInline={true} key={videoSrc} loop>
@@ -46,7 +46,7 @@ const Hero = () => {
         className='flex flex-col items-center opacity-0 translate-y-20 my-10'
         >
             <a href="#highlights" className='btn'>Explore</a>
-            <p className='font-normal text-xl'>Know more about the competition.</p>
+            <p className='font-normal text-xl'>Know more about us.</p>
         </div>
     </section>
   )

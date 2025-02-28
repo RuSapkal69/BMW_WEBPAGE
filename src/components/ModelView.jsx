@@ -7,7 +7,7 @@ const models = {
   "M4 Competition": { path: "/models/2024_bmw_m4_coupe_competition.glb", scale: 1.5 },
   "M5 Competition": { path: "/models/2021_bmw_m5_competition.glb", scale: 150 },
   "M6 Competition": { path: "/models/bmw_m6_gran_coupe.glb", scale: 1.5 },
-  "M8 Competition": { path: "/models/2020_BMW_M8_COUPE_first.glb", scale: 150 }, // Adjust scale as needed
+  "M8 Competition": { path: "/models/2020_BMW_M8_COUPE_first.glb", scale: 150 }, 
 };
 
 const ModelView = () => {

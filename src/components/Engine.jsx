@@ -53,18 +53,12 @@ const Engine = () => {
         ease: 'power2.out',
       }
     );
-    gsap.to('.g_fadeIn', {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      ease: 'power2.inOut',
-    });
   }, []);
   
   
 
   return (
-    <section className='common-padding'>
+    <section id="Specs" className='common-padding'>
       <div className='screen-max-width'>
         <div id="engine" className='flex-center w-full mt-0 mb-[5rem]'>
           <img 
@@ -83,7 +77,7 @@ const Engine = () => {
           </p>
         </div>
         <div className='mt-10 md:mt-20 mb-[20rem]'>
-          <div id="film" className='flex-center'>
+          <div id="Film" className='flex-center'>
             <video 
             playsInline muted={isMuted} preload='none' autoPlay ref={videoRef}
             className='w-full h-full object-cover'

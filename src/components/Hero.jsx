@@ -45,7 +45,7 @@ const Hero = () => {
         id="cda"
         className='flex flex-col items-center opacity-0 translate-y-20 my-10'
         >
-            <a href="#highlights" className='btn'>Explore</a>
+            <a href="#HighLights" className='btn'>Explore</a>
             <p className='font-normal text-xl'>Know more about us.</p>
         </div>
     </section>

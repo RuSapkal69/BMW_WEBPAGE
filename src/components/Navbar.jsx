@@ -2,6 +2,11 @@ import React from 'react'
 import { navLists} from '../constants'
 
 const Navbar = () => {
+
+    const scrollToSection = (target) => {
+        document.querySelector(`#${target}`)?.scrollIntoView({ behavior: "smooth" });
+    };
+
   return (
     <header className='w-full py-5 sm:px-10 px-5 flex items-center justify-between'>
         <nav className='flex w-full screen-max-width'>
@@ -14,7 +19,7 @@ const Navbar = () => {
 
             <div className='flex flex-1 justify-center max-sm:hidden'>
                 {navLists.map((nav, index) => (
-                    <div key = {index} className='px-20 text-sm cursor-pointer text-gray hover:text-white transition-all' >
+                    <div onClick={() => scrollToSection(nav)} key = {index} className='px-20 text-sm cursor-pointer text-gray hover:text-white transition-all' >
                         {nav}
                     </div>
 

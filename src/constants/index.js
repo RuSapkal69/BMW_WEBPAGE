@@ -15,32 +15,40 @@ import {
     {
       id: 1,
       textLists: [
-        "Enter A17 Pro.",
-        "Game‑changing chip.",
-        "Groundbreaking performance.",
+        "M TwinPower Turbo.",
+        "Precision engineering.",
+        "Unmatched performance."
       ],
       video: highlightFirstVideo,
       videoDuration: 10,
     },
     {
       id: 2,
-      textLists: ["Titanium.", "So strong. So light. So Pro."],
+      textLists: [
+        "Carbon fiber mastery.",
+        "Lighter.", 
+        " Stronger.", 
+        " Faster."
+      ],
       video: highlightSecondVideo,
       videoDuration: 30,
     },
     {
       id: 3,
       textLists: [
-        "iPhone 15 Pro Max has the",
-        "longest optical zoom in",
-        "iPhone ever. Far out.",
+        "The most powerful M ever.",
+        "A masterpiece of speed and precision."
       ],
       video: highlightThirdVideo,
       videoDuration: 6,
     },
     {
       id: 4,
-      textLists: ["All-new Action button.", "What will yours do?."],
+      textLists: [
+        "Immersive ambiance.",
+        "Unrivaled comfort. Ultimate luxury.",        
+        "Where performance meets elegance."
+      ],
       video: highlightFourthVideo,
       videoDuration: 28,
     },

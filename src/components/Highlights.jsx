@@ -30,7 +30,7 @@ const Highlights = () => {
               />
             </p>
             <p className='link'>
-              Watch the event
+              Read our magazine
               <img 
               src={rightImg} alt="Right Icon"
               className='ml-2'

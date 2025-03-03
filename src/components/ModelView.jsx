@@ -19,11 +19,11 @@ const ModelView = () => {
   return (
     <div className="w-full h-full relative">
       {/* Model Selection Buttons */}
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 flex gap-3 z-10 bg-black p-2 rounded-lg shadow-lg">
+      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 flex flex-wrap lg:flex-nowrap gap-3 z-10 bg-black p-2 rounded-lg shadow-lg">
         {Object.keys(models).map((model) => (
           <button
             key={model}
-            className={`px-4 py-2 text-sm font-semibold rounded-lg transition-all ${
+            className={`flex-1 lg:flex-initial px-4 py-2 text-sm font-semibold rounded-lg transition-all ${
               selectedModel === model ? "bg-gray-700 text-white" : "bg-blue-600 text-white" 
             }`}
             onClick={() => setSelectedModel(model)}
